@@ -1,7 +1,12 @@
-name: llm
+name: a2cps
 channels:
   - conda-forge
 dependencies:
   - ipywidgets
   - ipykernel
   - jupyterlab
+  - pandas
+  - plotly
+  - requests
+  - flask
+  - jupyter-dash
