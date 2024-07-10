@@ -9,4 +9,3 @@ dependencies:
   - plotly
   - requests
   - flask
-  - jupyter-dash
