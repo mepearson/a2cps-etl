@@ -6,10 +6,10 @@ set -xe
 # COOKBOOK_NAME: Name of the cookbook
 # COOKBOOK_CONDA_ENV: Name of the conda environment
 # IS_GPU_JOB: Boolean value to indicate if the job is a GPU job. If true, it will load the CUDA module
-export GIT_REPO_URL="https://github.com/In-For-Disaster-Analytics/Cookbook-Jupyter-Template.git"
-export COOKBOOK_NAME="cookbook-template-jupyter"
-export COOKBOOK_CONDA_ENV="example"
-IS_GPU_JOB=false
+export GIT_REPO_URL="https://github.com/mepearson/a2cps-etl.git"
+export COOKBOOK_NAME="a2cps-jupyter-lab"
+export COOKBOOK_CONDA_ENV="a2cps"
+IS_GPU_JOB=true
 
 
 # Cookbook Variables
