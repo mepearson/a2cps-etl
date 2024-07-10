@@ -6,10 +6,10 @@ set -xe
 # COOKBOOK_NAME: Name of the cookbook
 # COOKBOOK_CONDA_ENV: Name of the conda environment
 # IS_GPU_JOB: Boolean value to indicate if the job is a GPU job. If true, it will load the CUDA module
-export GIT_REPO_URL="https://github.com/mepearson/a2cps-etl.git"
+export GIT_REPO_URL="https://github.com/In-For-Disaster-Analytics/cookbooks-ui.git"
 export COOKBOOK_NAME="a2cps-jupyter-lab"
 export COOKBOOK_CONDA_ENV="a2cps"
-IS_GPU_JOB=true
+IS_GPU_JOB=false
 
 
 # Cookbook Variables
@@ -238,10 +238,10 @@ function conda_environment_exists() {
 
 function create_conda_environment() {
 	if [ -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yml ]; then
-		conda env create -n ${COOKBOOK_CONDA_ENV} -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yml --force
+		conda env create -n ${COOKBOOK_CONDA_ENV} -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yml --yes
 		conda activate ${COOKBOOK_CONDA_ENV}
 	elif  [ -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yaml ]; then
-		conda env create -n ${COOKBOOK_CONDA_ENV} -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yaml --force
+		conda env create -n ${COOKBOOK_CONDA_ENV} -f $COOKBOOK_WORKSPACE_DIR/.binder/environment.yaml --yes
 		conda activate ${COOKBOOK_CONDA_ENV}
 	fi
 	if [ -f $COOKBOOK_WORKSPACE_DIR/.binder/requirements.txt ]; then
