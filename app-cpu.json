@@ -1,6 +1,6 @@
 {
   "id": "a2cps-jupyter-lab-cpu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A2CPS Jupyter Lab environment for CPU",
   "owner": "${apiUserId}",
   "enabled": true,
