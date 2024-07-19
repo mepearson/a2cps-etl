@@ -270,7 +270,10 @@ function handle_installation() {
 	fi
 }
 
-
+function pre_start(){
+	conda activate ${COOKBOOK_CONDA_ENV}
+	conda install jupyterlab jupyterlab_server jupyter_server traitlets nbformat jsonschema --force-reinstall --yes
+}
 
 #Execution
 install_conda
@@ -284,6 +287,7 @@ get_tap_certificate
 get_tap_token
 create_jupyter_configuration
 handle_installation
+pre_start
 run_jupyter
 port_fowarding
 send_url_to_webhook
